@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "music",
+  "description": "Download music free",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://y.qq.com/*", "*://dl.stream.qqmusic.qq.com/*"],
+      "js": ["./src/myscript.js"]
+    }
+  ]
+}
