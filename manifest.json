@@ -1,14 +1,30 @@
 {
   "manifest_version": 2,
 
-  "name": "music",
-  "description": "Download music free",
+  "name": "UK Charts",
   "version": "1.0",
 
+  "description": "Listen music from UK Charts.",
+  "icons": {
+    "16": "./imgs/16.jpg",
+    "48": "./imgs/48.jpg",
+    "128": "./imgs/128.jpg"
+  },
+
+  "author": "Xiaoshuang Li",
+  "permissions": [
+    "https://www.deezer.com/",
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "matches": ["*://y.qq.com/*", "*://dl.stream.qqmusic.qq.com/*"],
-      "js": ["./src/myscript.js"]
+      "matches": ["*://www.officialcharts.com/*"],
+      "js": ["./src/index.js"]
     }
-  ]
+  ],
+  "browser_action": {},
+  "background": {
+    "scripts": ["./src/background.js"],
+    "persistent": false
+  }
 }
