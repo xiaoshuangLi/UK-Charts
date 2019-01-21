@@ -180,6 +180,7 @@ const render = (list = []) => {
       top: 0;
       right: 0;
       bottom: 0;
+      padding-bottom: 10px;
       color: #444;
       font-size: 12px;
       background: rgba(255,255,255, .8);
